@@ -1,0 +1,2 @@
+class Tipepaket < ApplicationRecord
+end

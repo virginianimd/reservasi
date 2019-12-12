@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  noinvoice: 1
+  tanggal: 2019-12-12
+  supplier: MyString
+  telp: 1
+  paymentdue: 2019-12-12
+  desk: MyText
+  namatamu: MyString
+  namaaktifitas: MyString
+  tglaktifitas: 2019-12-12
+  qty: 1
+  totalamount: 9.99
+  namaakun: MyString
+  nomorakun: 1
+  swiftcode: MyString
+
+two:
+  noinvoice: 1
+  tanggal: 2019-12-12
+  supplier: MyString
+  telp: 1
+  paymentdue: 2019-12-12
+  desk: MyText
+  namatamu: MyString
+  namaaktifitas: MyString
+  tglaktifitas: 2019-12-12
+  qty: 1
+  totalamount: 9.99
+  namaakun: MyString
+  nomorakun: 1
+  swiftcode: MyString

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kodebooking: 1
+  namatamu: MyString
+  qty: 1
+  tanggal: 2019-12-12
+  hotel: MyText
+  negara: MyString
+  telp: 1
+  email: MyString
+  note: MyText
+  jenispaket: MyString
+  namaaktifitas: MyString
+  supplier: MyString
+
+two:
+  kodebooking: 1
+  namatamu: MyString
+  qty: 1
+  tanggal: 2019-12-12
+  hotel: MyText
+  negara: MyString
+  telp: 1
+  email: MyString
+  note: MyText
+  jenispaket: MyString
+  namaaktifitas: MyString
+  supplier: MyString

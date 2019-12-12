@@ -1,0 +1,87 @@
+<%= form_with(model: invoice, local: true) do |form| %>
+  <% if invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+        <% invoice.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :noinvoice %>
+    <%= form.number_field :noinvoice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tanggal %>
+    <%= form.date_select :tanggal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplier %>
+    <%= form.text_field :supplier %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telp %>
+    <%= form.number_field :telp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paymentdue %>
+    <%= form.date_select :paymentdue %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desk %>
+    <%= form.text_area :desk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namatamu %>
+    <%= form.text_field :namatamu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namaaktifitas %>
+    <%= form.text_field :namaaktifitas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tglaktifitas %>
+    <%= form.date_select :tglaktifitas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.number_field :qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalamount %>
+    <%= form.text_field :totalamount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namaakun %>
+    <%= form.text_field :namaakun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomorakun %>
+    <%= form.number_field :nomorakun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :swiftcode %>
+    <%= form.text_field :swiftcode %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

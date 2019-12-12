@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Noinvoice:</strong>
+  <%= @invoice.noinvoice %>
+</p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @invoice.tanggal %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @invoice.supplier %>
+</p>
+
+<p>
+  <strong>Telp:</strong>
+  <%= @invoice.telp %>
+</p>
+
+<p>
+  <strong>Paymentdue:</strong>
+  <%= @invoice.paymentdue %>
+</p>
+
+<p>
+  <strong>Desk:</strong>
+  <%= @invoice.desk %>
+</p>
+
+<p>
+  <strong>Namatamu:</strong>
+  <%= @invoice.namatamu %>
+</p>
+
+<p>
+  <strong>Namaaktifitas:</strong>
+  <%= @invoice.namaaktifitas %>
+</p>
+
+<p>
+  <strong>Tglaktifitas:</strong>
+  <%= @invoice.tglaktifitas %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @invoice.qty %>
+</p>
+
+<p>
+  <strong>Totalamount:</strong>
+  <%= @invoice.totalamount %>
+</p>
+
+<p>
+  <strong>Namaakun:</strong>
+  <%= @invoice.namaakun %>
+</p>
+
+<p>
+  <strong>Nomorakun:</strong>
+  <%= @invoice.nomorakun %>
+</p>
+
+<p>
+  <strong>Swiftcode:</strong>
+  <%= @invoice.swiftcode %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

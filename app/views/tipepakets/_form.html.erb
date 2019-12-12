@@ -1,0 +1,42 @@
+<%= form_with(model: tipepaket, local: true) do |form| %>
+  <% if tipepaket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipepaket.errors.count, "error") %> prohibited this tipepaket from being saved:</h2>
+
+      <ul>
+        <% tipepaket.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :namaaktifitas %>
+    <%= form.text_field :namaaktifitas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :harga %>
+    <%= form.text_field :harga %>
+  </div>
+
+  <div class="field">
+    <%= form.label :include %>
+    <%= form.text_area :include %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exclude %>
+    <%= form.text_area :exclude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jenispaket %>
+    <%= form.text_field :jenispaket %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

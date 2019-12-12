@@ -1,0 +1,2 @@
+class Paket < ApplicationRecord
+end

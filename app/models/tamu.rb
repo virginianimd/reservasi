@@ -1,0 +1,2 @@
+class Tamu < ApplicationRecord
+end

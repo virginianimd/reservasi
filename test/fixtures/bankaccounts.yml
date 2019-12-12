@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namaakun: MyString
+  namabank: MyString
+  nomorakun: 1
+  swiftcode: MyString
+
+two:
+  namaakun: MyString
+  namabank: MyString
+  nomorakun: 1
+  swiftcode: MyString

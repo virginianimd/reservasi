@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Namaakun:</strong>
+  <%= @bankaccount.namaakun %>
+</p>
+
+<p>
+  <strong>Namabank:</strong>
+  <%= @bankaccount.namabank %>
+</p>
+
+<p>
+  <strong>Nomorakun:</strong>
+  <%= @bankaccount.nomorakun %>
+</p>
+
+<p>
+  <strong>Swiftcode:</strong>
+  <%= @bankaccount.swiftcode %>
+</p>
+
+<%= link_to 'Edit', edit_bankaccount_path(@bankaccount) %> |
+<%= link_to 'Back', bankaccounts_path %>

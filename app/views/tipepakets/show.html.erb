@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Namaaktifitas:</strong>
+  <%= @tipepaket.namaaktifitas %>
+</p>
+
+<p>
+  <strong>Harga:</strong>
+  <%= @tipepaket.harga %>
+</p>
+
+<p>
+  <strong>Include:</strong>
+  <%= @tipepaket.include %>
+</p>
+
+<p>
+  <strong>Exclude:</strong>
+  <%= @tipepaket.exclude %>
+</p>
+
+<p>
+  <strong>Jenispaket:</strong>
+  <%= @tipepaket.jenispaket %>
+</p>
+
+<%= link_to 'Edit', edit_tipepaket_path(@tipepaket) %> |
+<%= link_to 'Back', tipepakets_path %>
