@@ -11,151 +11,67 @@
     </div>
   <% end %>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Tamu</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group ">
-          <%= form.label :Kode Booking%>
-          <%= form.number_field :kodebooking, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Nama Tamu  %>
-          <%= form.text_field :namatamu, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Qty  %>
-          <%= form.number_area :qty, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Tanggal  %>
-          <%= form.date_select :tanggal, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Hotel  %>
-          <%= form.text_area :hotel, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Negara  %>
-          <%= form.text_field :negara, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Telp.  %>
-          <%= form.number_field :telp, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Email  %>
-          <%= form.text_field :email, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Note  %>
-          <%= form.text_area :note, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Jenis Paket  %>
-          <%= form.text_field :jenispaket, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Nama Aktifitas  %>
-          <%= form.text_field :namaaktifitas, class:'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :Supplier  %>
-          <%= form.text_field :supplier, class:'form-control' %>
-        </div>
-          # <div class="form-group">
-          #   <%= form.hidden_field :user_id, :value => current_user.id %>
-          # </div>
-      </div>
-      <div class="modal-footer">
-        <div class="button">
-        <%= form.submit class:'btn button4'  %>
-      </div>
-      </div>
-    </div>
+  <div class="field">
+    <%= form.label :kodebooking %>
+    <%= form.number_field :kodebooking %>
   </div>
-</div>
-</div>
 
+  <div class="field">
+    <%= form.label :namatamu %>
+    <%= form.text_field :namatamu %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :kodebooking %>
-  #   <%= form.number_field :kodebooking %>
-  # </div>
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.number_field :qty %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :namatamu %>
-  #   <%= form.text_field :namatamu %>
-  # </div>
+  <div class="field">
+    <%= form.label :tanggal %>
+    <%= form.date_select :tanggal %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :qty %>
-  #   <%= form.number_field :qty %>
-  # </div>
+  <div class="field">
+    <%= form.label :hotel %>
+    <%= form.text_area :hotel %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :tanggal %>
-  #   <%= form.date_select :tanggal %>
-  # </div>
+  <div class="field">
+    <%= form.label :negara %>
+    <%= form.text_field :negara %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :hotel %>
-  #   <%= form.text_area :hotel %>
-  # </div>
+  <div class="field">
+    <%= form.label :telp %>
+    <%= form.number_field :telp %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :negara %>
-  #   <%= form.text_field :negara %>
-  # </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :telp %>
-  #   <%= form.number_field :telp %>
-  # </div>
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :email %>
-  #   <%= form.text_field :email %>
-  # </div>
+  <div class="field">
+    <%= form.label :jenispaket %>
+    <%= form.text_field :jenispaket %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :note %>
-  #   <%= form.text_area :note %>
-  # </div>
+  <div class="field">
+    <%= form.label :namaaktifitas %>
+    <%= form.text_field :namaaktifitas %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :jenispaket %>
-  #   <%= form.text_field :jenispaket %>
-  # </div>
+  <div class="field">
+    <%= form.label :supplier %>
+    <%= form.text_field :supplier %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :namaaktifitas %>
-  #   <%= form.text_field :namaaktifitas %>
-  # </div>
-
-  # <div class="field">
-  #   <%= form.label :supplier %>
-  #   <%= form.text_field :supplier %>
-  # </div>
-
-  # <div class="actions">
-  #   <%= form.submit %>
-  # </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
