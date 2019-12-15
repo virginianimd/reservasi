@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_150430) do
+ActiveRecord::Schema.define(version: 2019_12_15_024305) do
 
   create_table "bankaccounts", force: :cascade do |t|
     t.string "namaakun"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_12_12_150430) do
     t.string "swiftcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "namabank"
+    t.text "address"
   end
 
   create_table "pakets", force: :cascade do |t|

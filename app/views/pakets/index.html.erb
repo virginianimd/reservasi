@@ -18,9 +18,9 @@
       <tr>
         <td><%= paket.jenispaket %></td>
         <td><%= paket.desk %></td>
-        <td><%= link_to 'Show', paket %></td>
-        <td><%= link_to 'Edit', edit_paket_path(paket) %></td>
-        <td><%= link_to 'Destroy', paket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', paket, class: 'btn btn-mini' %></td>
+        <td><%= link_to 'Edit', edit_paket_path(paket), class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Destroy', paket, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger'  %></td>
       </tr>
     <% end %>
   </tbody>

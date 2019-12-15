@@ -33,7 +33,8 @@
 
   <div class="field">
     <%= form.label :JenisPaket %>
-    <%= form.text_field :jenispaket, :value => params[:jenispaket] %>
+    <%= form.select(:jenispaket, options_for_select([['Rafting', 'Rafting'], ['Tubing', 'Tubing'], ['Snorkeling', 'Snorkeling'],
+    ['Tour', 'Tour'], ['Transfer', 'Transfer'], ['Watersport', 'Watersport']])) %>
   </div>
 
   <div class="actions">
