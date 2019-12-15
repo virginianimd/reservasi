@@ -1,74 +1,107 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Noinvoice:</strong>
-  <%= @invoice.noinvoice %>
-</p>
-
-<p>
-  <strong>Tanggal:</strong>
-  <%= @invoice.tanggal %>
-</p>
-
-<p>
-  <strong>Supplier:</strong>
-  <%= @invoice.supplier %>
-</p>
-
-<p>
-  <strong>Telp:</strong>
-  <%= @invoice.telp %>
-</p>
-
-<p>
-  <strong>Paymentdue:</strong>
-  <%= @invoice.paymentdue %>
-</p>
-
-<p>
-  <strong>Desk:</strong>
-  <%= @invoice.desk %>
-</p>
-
-<p>
-  <strong>Namatamu:</strong>
-  <%= @invoice.namatamu %>
-</p>
-
-<p>
-  <strong>Namaaktifitas:</strong>
-  <%= @invoice.namaaktifitas %>
-</p>
-
-<p>
-  <strong>Tglaktifitas:</strong>
-  <%= @invoice.tglaktifitas %>
-</p>
-
-<p>
-  <strong>Qty:</strong>
-  <%= @invoice.qty %>
-</p>
-
-<p>
-  <strong>Totalamount:</strong>
-  <%= @invoice.totalamount %>
-</p>
-
-<p>
-  <strong>Namaakun:</strong>
-  <%= @invoice.namaakun %>
-</p>
-
-<p>
-  <strong>Nomorakun:</strong>
-  <%= @invoice.nomorakun %>
-</p>
-
-<p>
-  <strong>Swiftcode:</strong>
-  <%= @invoice.swiftcode %>
-</p>
+<div class="container" alig"center">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="text-xs-center">
+                <i class="fa fa-search-plus float-xs-left icon"></i>
+                <h2>Invoice for purchase #<%= @invoice.noinvoice %></h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3 float-xs-left">
+                    <div class="card  height">
+                        <div class="card-header">Billing Details</div>
+                        <div class="card-block">
+                            <strong>Bali Tubing & Rafting</strong><br>
+                            Jl. Telaga Waja Karangasem<br>
+                            <strong>+62 89696364614</strong><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="card  height">
+                        <div class="card-header">Payment Information</div>
+                        <div class="card-block">
+                            <strong>Bank Name:</strong> Visa<br>
+                            <strong>Account Name:</strong> <%= @invoice.namaakun %><br>
+                            <strong>Account Number:</strong> <%= @invoice.nomorakun %><br>
+                            <strong>Swiftcode:</strong> <%= @invoice.swiftcode %><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="card  height">
+                        <div class="card-header">Order Preferences</div>
+                        <div class="card-block">
+                            <strong>Date: </strong><%= @invoice.tanggal %><br>
+                            <strong>Due Date:</strong><%= @invoice.paymentdue %><br>
+                            <strong>Insurance:</strong> No<br>
+                            <strong>Coupon:</strong> No<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3 float-xs-right">
+                    <div class="card  height">
+                        <div class="card-header">Shipping Address</div>
+                        <div class="card-block">
+                            <strong><%= @invoice.supplier %></strong><br>
+                            <%= @invoice.telp %><br>
+                            Arlington<br>
+                            VA<br>
+                            <strong>22 203</strong><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h3 class="text-xs-center"><strong>Order summary</strong></h3>
+                    <td><strong>Description: <%= @invoice.desk %></strong></td>
+                </div>
+                <div class="card-block">
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <td><strong>Activity Name</strong></td>
+                                    <td class="text-xs-center"><strong>Activity Date</strong></td>
+                                    <td class="text-xs-center"><strong>Name of Guest</strong></td>
+                                    <td class="text-xs-right"><strong></strong>Qty</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><%= @invoice.namaaktifitas %></td>
+                                    <td class="text-xs-center"><%= @invoice.tglaktifitas %></td>
+                                    <td class="text-xs-center"><%= @invoice.namatamu %></td>
+                                    <td class="text-xs-right"><%= @invoice.qty %></td>
+                                </tr>
+                                <tr>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow text-xs-center"><strong>Subtotal</strong></td>
+                                    <td class="highrow text-xs-right">$958.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow text-xs-center"><strong>Total</strong></td>
+                                    <td class="emptyrow text-xs-right"><%= @invoice.totalamount %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |
 <%= link_to 'Back', invoices_path %>
