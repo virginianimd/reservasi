@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_124423) do
+ActiveRecord::Schema.define(version: 2019_12_16_164246) do
 
   create_table "bankaccounts", force: :cascade do |t|
     t.string "namaakun"
@@ -85,7 +85,6 @@ ActiveRecord::Schema.define(version: 2019_12_16_124423) do
     t.string "jenispaket"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "supplier"
     t.integer "supplier_id"
   end
 
