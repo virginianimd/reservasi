@@ -12,63 +12,68 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :kodebooking %>
+    <%= form.label :Kode_Booking %>
     <%= form.number_field :kodebooking %>
   </div>
 
   <div class="field">
-    <%= form.label :namatamu %>
+    <%= form.label :Nama_Tamu %>
     <%= form.text_field :namatamu %>
   </div>
 
   <div class="field">
-    <%= form.label :qty %>
+    <%= form.label :Qty %>
     <%= form.number_field :qty %>
   </div>
 
   <div class="field">
-    <%= form.label :tanggal %>
+    <%= form.label :Tanggal %>
     <%= form.date_select :tanggal %>
   </div>
 
   <div class="field">
-    <%= form.label :hotel %>
+    <%= form.label :Hotel %>
     <%= form.text_area :hotel %>
   </div>
 
   <div class="field">
-    <%= form.label :negara %>
+    <%= form.label :Negara %>
     <%= form.text_field :negara %>
   </div>
 
   <div class="field">
-    <%= form.label :telp %>
+    <%= form.label :Telp %>
     <%= form.number_field :telp %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :Email %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :note %>
+    <%= form.label :Driver %>
+    <%= form.text_field :driver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Note %>
     <%= form.text_area :note %>
   </div>
 
   <div class="field">
-    <%= form.label :jenispaket %>
-    <%= form.text_field :jenispaket %>
+    <%= form.label :Supplier %>
+    <%= collection_select( :tipepaket, :supplier_id, Tipepaket.all, :id, :supplier_id, {}, { :multiple => false } ) %>
   </div>
 
   <div class="field">
-    <%= form.label :namaaktifitas %>
-    <%= form.text_field :namaaktifitas %>
+    <%= form.label :Jenis_Paket %>
+    <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :jenispaket, {}, { :multiple => false } ) %>
   </div>
 
   <div class="field">
-    <%= form.label :supplier %>
-    <%= form.text_field :supplier %>
+    <%= form.label :Nama_Aktifitas %>
+    <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :namaaktifitas, {}, { :multiple => false } ) %>
   </div>
 
   <div class="actions">

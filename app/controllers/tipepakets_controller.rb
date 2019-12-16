@@ -69,6 +69,6 @@ class TipepaketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tipepaket_params
-      params.require(:tipepaket).permit(:namaaktifitas, :harga, :include, :exclude, :jenispaket)
+      params.require(:tipepaket).permit(:namaaktifitas, :harga, :include, :exclude, :jenispaket, :supplier_id)
     end
 end

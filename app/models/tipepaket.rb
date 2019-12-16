@@ -1,3 +1,3 @@
 class Tipepaket < ApplicationRecord
-  belongs_to :paket
+  belongs_to :supplier
 end

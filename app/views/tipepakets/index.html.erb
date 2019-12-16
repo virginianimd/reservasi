@@ -7,6 +7,7 @@
 <table class="table">
   <thead class="thead-dark">
     <tr align="center">
+      <th>Nama Supplier</th>
       <th>Nama Aktifitas</th>
       <th>Harga</th>
       <th>Include</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @tipepakets.each do |tipepaket| %>
       <tr>
+        <td><%= tipepaket.supplier_id%></td>
         <td><%= tipepaket.namaaktifitas %></td>
         <td><%= tipepaket.harga %></td>
         <td><%= tipepaket.include %></td>

@@ -69,6 +69,6 @@ class TamusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tamu_params
-      params.require(:tamu).permit(:kodebooking, :namatamu, :qty, :tanggal, :hotel, :negara, :telp, :email, :note, :jenispaket, :namaaktifitas, :supplier)
+      params.require(:tamu).permit(:kodebooking, :namatamu, :qty, :tanggal, :hotel, :negara, :telp, :email, :note, :jenispaket, :namaaktifitas, :supplier_id)
     end
 end

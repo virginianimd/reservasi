@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :Supplier %>
+    <%= collection_select( :tipepaket, :supplier_id, Supplier.all, :id, :supplier, {}, { :multiple => false } ) %>
+  </div>
+
+  <div class="field">
     <%= form.label :Namaaktifitas %>
     <%= form.text_field :namaaktifitas %>
   </div>

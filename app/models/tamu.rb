@@ -1,3 +1,3 @@
 class Tamu < ApplicationRecord
-  belongs_to :supplier
+  belongs_to :tipepaket
 end
