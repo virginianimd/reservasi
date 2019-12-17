@@ -15,3 +15,42 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+ .user_card {
+  height: 400px;
+  width: 350px;
+  margin-top: 100px;
+  margin-bottom: auto;
+  background-image: linear-gradient( #bdcdc4, #c3d7d9, #a5d3d4);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3)
+}
+
+.brand_logo_container {
+  height: 170px;
+  width: 170px;
+  top: -50px;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.grad {
+  background-color: #B0C4DE;
+}
+
+.container-fluid {
+  padding-top: 80px;
+}
