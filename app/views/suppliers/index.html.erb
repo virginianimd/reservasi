@@ -1,4 +1,4 @@
-<%= render partial: 'structures/navigation' %>  
+<%= render partial: 'structures/navigation' %> 
 
 <p id="notice"><%= notice %></p>
 
@@ -23,9 +23,11 @@
         <td><%= supplier.email %></td>
         <td><%= supplier.telp %></td>
         <td><%= supplier.termin %></td>
-        <td><%= link_to 'Show', supplier %></td>
-        <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
-        <td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Lihat', supplier, class: 'btn btn-success btn-sm glyphicon glyphicon-menu-hamburger' %>
+        </td>
+        <td><%= link_to 'Edit', edit_supplier_path(supplier), class: 'btn btn-warning btn-sm glyphicon glyphicon-edit'  %></td>
+        <td><%= link_to 'Hapus', supplier, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm glyphicon glyphicon-remove'  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Supplier', new_supplier_path %>
+<%= link_to 'Tambahkan Supplier', new_supplier_path, class: 'btn btn-primary btn-sm glyphicon glyphicon-edit' %>

@@ -1,3 +1,5 @@
+<%= render partial: 'structures/navigation' %> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,7 +8,7 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Alamat:</strong>
   <%= @supplier.address %>
 </p>
 
@@ -16,9 +18,9 @@
 </p>
 
 <p>
-  <strong>Telp:</strong>
+  <strong>Telpon:</strong>
   <%= @supplier.telp %>
 </p>
 
-<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
-<%= link_to 'Back', suppliers_path %>
+<%= link_to 'Edit', edit_supplier_path(@supplier), class: 'btn btn-warning btn-sm glyphicon glyphicon-edit' %> |
+<%= link_to 'Back', suppliers_path, class: 'btn btn-info btn-sm glyphicon glyphicon-menu-left' %>
