@@ -11,72 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Kode_Booking %>
-    <%= form.number_field :kodebooking %>
+    <%= form.number_field :kodebooking, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Nama_Tamu %>
-    <%= form.text_field :namatamu %>
+    <%= form.text_field :namatamu, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Qty %>
-    <%= form.number_field :qty %>
+    <%= form.number_field :qty, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Tanggal %>
-    <%= form.date_select :tanggal %>
+    <%= form.date_select :tanggal, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Hotel %>
-    <%= form.text_area :hotel %>
+    <%= form.text_area :hotel, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Negara %>
-    <%= form.text_field :negara %>
+    <%= form.text_field :negara, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Telp %>
-    <%= form.number_field :telp %>
+    <%= form.number_field :telp, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Driver %>
-    <%= form.text_field :driver %>
+    <%= form.text_field :driver, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Note %>
-    <%= form.text_area :note %>
+    <%= form.text_area :note, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Supplier %>
     <%= collection_select( :tipepaket, :supplier_id, Tipepaket.all, :id, :supplier_id, {}, { :multiple => false } ) %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Jenis_Paket %>
     <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :jenispaket, {}, { :multiple => false } ) %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Nama_Aktifitas %>
     <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :namaaktifitas, {}, { :multiple => false } ) %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group">
+    <%= form.submit 'Tambah Tamu', class: 'btn btn-success' %>
   </div>
 <% end %>
