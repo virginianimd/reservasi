@@ -17,10 +17,10 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody align="center">
     <% @tipepakets.each do |tipepaket| %>
       <tr>
-        <td><%= tipepaket.supplier_id%></td>
+        <td><%= tipepaket.supplier.try(:supplier)%></td>
         <td><%= tipepaket.namaaktifitas %></td>
         <td><%= tipepaket.harga %></td>
         <td><%= tipepaket.include %></td>
