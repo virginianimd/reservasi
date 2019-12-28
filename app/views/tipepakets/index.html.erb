@@ -6,7 +6,7 @@
 
 <table class="table">
   <thead class="thead-dark">
-    <tr align="center">
+    <tr>
       <th>Nama Supplier</th>
       <th>Nama Aktifitas</th>
       <th>Harga</th>
@@ -17,7 +17,7 @@
     </tr>
   </thead>
 
-  <tbody align="center">
+  <tbody>
     <% @tipepakets.each do |tipepaket| %>
       <tr>
         <td><%= tipepaket.supplier.try(:supplier)%></td>
@@ -26,9 +26,9 @@
         <td><%= tipepaket.include %></td>
         <td><%= tipepaket.exclude %></td>
         <td><%= tipepaket.jenispaket %></td>
-        <td><%= link_to 'Show', tipepaket %></td>
-        <td><%= link_to 'Edit', edit_tipepaket_path(tipepaket) %></td>
-        <td><%= link_to 'Destroy', tipepaket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', tipepaket, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
+        <td><%= link_to 'Edit', edit_tipepaket_path(tipepaket), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
+        <td><%= link_to 'Destroy', tipepaket, method: :delete, data: { confirm: 'Are you sure?' }, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Tipepaket', new_tipepaket_path %>
+<%= link_to 'New Tipepaket', new_tipepaket_path, class: 'btn btn-info btn-sm' %>

@@ -11,38 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Supplier %>
-    <%= collection_select( :tipepaket, :supplier_id, Supplier.all, :id, :supplier, {}, { :multiple => false } ) %>
+    <%= collection_select( :tipepaket, :supplier_id, Supplier.all, :id, :supplier, {}, { :multiple => false }) %>
   </div>
 
-  <div class="field">
-    <%= form.label :Namaaktifitas %>
-    <%= form.text_field :namaaktifitas %>
+  <div class="field form-group">
+    <%= form.label :Nama_Aktifitas %>
+    <%= form.text_field :namaaktifitas, class:'form-control', placeholder:'Nama Aktifitas' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Harga %>
-    <%= form.text_field :harga %>
+    <%= form.text_field :harga, class:'form-control', placeholder:'Harga' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Include %>
-    <%= form.text_area :include %>
+    <%= form.text_area :include, class:'form-control', placeholder:'Include' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :Exclude %>
-    <%= form.text_area :exclude %>
+    <%= form.text_area :exclude, class:'form-control', placeholder:'Exclude' %>
   </div>
 
-  <div class="field">
-    <%= form.label :JenisPaket %>
+  <div class="field form-group">
+    <%= form.label :Jenis_Paket %>
     <%= form.select(:jenispaket, options_for_select([['Rafting', 'Rafting'], ['Tubing', 'Tubing'], ['Snorkeling', 'Snorkeling'],
     ['Tour', 'Tour'], ['Transfer', 'Transfer'], ['Watersport', 'Watersport']])) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Tambahkan Paket', class: 'btn btn-info btn-sm' %>
   </div>
 <% end %>

@@ -1,7 +1,9 @@
+<%= render partial: 'structures/navigation' %> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Namaaktifitas:</strong>
+  <strong>Nama Aktifitas:</strong>
   <%= @tipepaket.namaaktifitas %>
 </p>
 
@@ -21,9 +23,9 @@
 </p>
 
 <p>
-  <strong>Jenispaket:</strong>
+  <strong>Jenis Paket:</strong>
   <%= @tipepaket.jenispaket %>
 </p>
 
-<%= link_to 'Edit', edit_tipepaket_path(@tipepaket) %> |
-<%= link_to 'Back', tipepakets_path %>
+<%= link_to 'Edit', edit_tipepaket_path(@tipepaket), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %> |
+<%= link_to 'Back', tipepakets_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
