@@ -1,6 +1,8 @@
+<%= render partial: 'structures/navigation' %> 
+
 <h1>Editing Supplier</h1>
 
 <%= render 'form', supplier: @supplier %>
 
-<%= link_to 'Show', @supplier %> |
-<%= link_to 'Back', suppliers_path %>
+<%= link_to 'Show', @supplier, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %> 
+<%= link_to 'Back', suppliers_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
