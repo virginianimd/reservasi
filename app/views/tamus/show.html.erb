@@ -17,7 +17,7 @@
 
 <p>
   <strong>Tanggal:</strong>
-  <%= @tamu.tanggal %>
+  <%= @tamu.tglaktifitas %>
 </p>
 
 <p>
@@ -47,17 +47,17 @@
 
 <p>
   <strong>Jenispaket:</strong>
-  <%= @tamu.jenispaket %>
+  <%= @tamu.tipepaket.jenispaket %>
 </p>
 
 <p>
   <strong>Namaaktifitas:</strong>
-  <%= @tamu.namaaktifitas %>
+  <%= @tamu.tipepaket.namaaktifitas %>
 </p>
 
 <p>
   <strong>Supplier:</strong>
-  <%= @tamu.supplier %>
+  <%= @tamu.tipepaket.supplier_id %>
 </p>
 
 <%= link_to 'Edit', edit_tamu_path(@tamu) %> |

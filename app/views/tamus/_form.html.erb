@@ -28,7 +28,7 @@
 
   <div class="field form-group">
     <%= form.label :Tanggal %>
-    <%= form.date_select :tanggal, class: 'form-control' %>
+    <%= form.date_select :tglaktifitas, class: 'form-control' %>
   </div>
 
   <div class="field form-group">
@@ -63,20 +63,21 @@
 
   <div class="field form-group">
     <%= form.label :Supplier %>
-    <%= collection_select( :tipepaket, :supplier_id, Tipepaket.all, :id, :supplier_id, {}, { :multiple => false } ) %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :Jenis_Paket %>
-    <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :jenispaket, {}, { :multiple => false } ) %>
+    <%= collection_select( :tamu, :supplier, Tipepaket.all, :id, :supplier_id, {}, { :multiple => false } ) %>
   </div>
 
   <div class="field form-group">
     <%= form.label :Nama_Aktifitas %>
-    <%= collection_select( :tipepaket, :tipepaket, Tipepaket.all, :id, :namaaktifitas, {}, { :multiple => false } ) %>
+    <%= collection_select( :tamu, :namaaktifitas, Tipepaket.all, :id, :namaaktifitas, {}, { :multiple => false } ) %>
   </div>
 
+  <div class="field form-group">
+    <%= form.label :jenispaket %>
+    <%= collection_select( :tamu, :tipepaket_id, Tipepaket.all, :id, :jenispaket, {}, { :multiple => false }) %>
+  </div>
+
+
   <div class="actions form-group">
-    <%= form.submit 'Tambah Tamu', class: 'btn btn-success' %>
+    <%= form.submit 'Tambah Tamu', class: 'btn btn-info btn-sm' %>
   </div>
 <% end %>

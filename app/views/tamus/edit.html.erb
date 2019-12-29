@@ -1,6 +1,8 @@
+<%= render partial: 'structures/navigation' %> 
+
 <h1>Editing Tamu</h1>
 
 <%= render 'form', tamu: @tamu %>
 
-<%= link_to 'Show', @tamu %> |
-<%= link_to 'Back', tamus_path %>
+<%= link_to 'Show', @tamu, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %> |
+<%= link_to 'Back', tamus_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>

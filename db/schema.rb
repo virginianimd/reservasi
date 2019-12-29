@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_164246) do
+ActiveRecord::Schema.define(version: 2019_12_29_030748) do
 
   create_table "bankaccounts", force: :cascade do |t|
     t.string "namaakun"
@@ -68,13 +68,14 @@ ActiveRecord::Schema.define(version: 2019_12_16_164246) do
     t.integer "telp"
     t.string "email"
     t.text "note"
-    t.string "jenispaket"
     t.string "namaaktifitas"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "tglaktifitas"
-    t.integer "supplier_id"
     t.string "driver"
+    t.string "jenispaket"
+    t.integer "tipepaket_id"
+    t.string "supplier"
   end
 
   create_table "tipepakets", force: :cascade do |t|
