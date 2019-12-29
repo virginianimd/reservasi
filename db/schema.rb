@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_030748) do
+ActiveRecord::Schema.define(version: 2019_12_29_081038) do
 
   create_table "bankaccounts", force: :cascade do |t|
     t.string "namaakun"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_12_29_030748) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "namabank"
     t.text "address"
+    t.decimal "total"
   end
 
   create_table "pakets", force: :cascade do |t|
