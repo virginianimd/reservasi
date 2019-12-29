@@ -28,7 +28,7 @@ class TipepaketsController < ApplicationController
 
     respond_to do |format|
       if @tipepaket.save
-        format.html { redirect_to @tipepaket, notice: 'Tipepaket was successfully created.' }
+        format.html { redirect_to @tipepaket, notice: 'Tipepaket Berhasil Dbuat.' }
         format.json { render :show, status: :created, location: @tipepaket }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TipepaketsController < ApplicationController
   def update
     respond_to do |format|
       if @tipepaket.update(tipepaket_params)
-        format.html { redirect_to @tipepaket, notice: 'Tipepaket was successfully updated.' }
+        format.html { redirect_to @tipepaket, notice: 'Tipepaket Berhasil Diubah.' }
         format.json { render :show, status: :ok, location: @tipepaket }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TipepaketsController < ApplicationController
   def destroy
     @tipepaket.destroy
     respond_to do |format|
-      format.html { redirect_to tipepakets_url, notice: 'Tipepaket was successfully destroyed.' }
+      format.html { redirect_to tipepakets_url, notice: 'Tipepaket Berhasil Dihapus.' }
       format.json { head :no_content }
     end
   end
