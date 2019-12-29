@@ -4,7 +4,7 @@ class TamusController < ApplicationController
   # GET /tamus
   # GET /tamus.json
   def index
-    @tamus = Tamu.all
+    @tamus = Tamu.search(params[:search])
   end
 
   # GET /tamus/1

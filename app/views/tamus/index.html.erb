@@ -1,7 +1,9 @@
 <%= render partial: 'structures/navigation' %>  
-
 <p id="notice"><%= notice %></p>
-
+<%= form_tag tamus_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
 <h1>Tamus</h1>
 
 <table class="table">
