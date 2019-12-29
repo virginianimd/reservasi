@@ -22,9 +22,9 @@
         <td><%= invoice.paymentdue %></td>
         <td><%= invoice.supplier %></td>
         <td><%= invoice.totalamount %></td>
-        <td><%= link_to 'Show', invoice %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', invoice, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Invoice', new_invoice_path %>
+<%= link_to 'Tambahkan Invoice', new_invoice_path, class: 'btn btn-info btn-sm' %>

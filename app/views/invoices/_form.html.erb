@@ -11,87 +11,84 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :noinvoice %>
-    <%= form.number_field :noinvoice %>
+  <div class="field form-group">
+    <%= form.label :No_Invoice %>
+    <%= form.number_field :noinvoice, class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :tanggal %>
+    <%= form.label :Tanggal %>
     <%= form.date_select :tanggal %>
-  </div>
-
-  <div class="field">
-    <%= form.label :supplier %>
-    <%= form.text_field :supplier %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telp %>
-    <%= form.number_field :telp %>
-  </div>
-
-  <div class="field">
-    <%= form.label :paymentdue %>
+    <%= form.label :Jatuh_tempo %>
     <%= form.date_select :paymentdue %>
   </div>
 
-  <div class="field">
-    <%= form.label :desk %>
-    <%= form.text_area :desk %>
+  <div class="field form-group">
+    <%= form.label :Supplier %>
+    <%= form.text_field :supplier, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :namatamu %>
-    <%= form.text_field :namatamu %>
+  <div class="field form-group">
+    <%= form.label :Telp %>
+    <%= form.number_field :telp, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :namaaktifitas %>
-    <%= form.text_field :namaaktifitas %>
+  <div class="field form-group">
+    <%= form.label :Deskripsi %>
+    <%= form.text_area :desk, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :tglaktifitas %>
+  <div class="field form-group">
+    <%= form.label :Nama_tamu %>
+    <%= form.text_field :namatamu, class:'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :nama_aktifitas %>
+    <%= form.text_field :namaaktifitas, class:'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Tanggal_aktifitas %>
     <%= form.date_select :tglaktifitas %>
   </div>
 
-  <div class="field">
-    <%= form.label :qty %>
-    <%= form.number_field :qty %>
+  <div class="field form-group">
+    <%= form.label :Qty %>
+    <%= form.number_field :qty, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.number_field :total %>
+  <div class="field form-group">
+    <%= form.label :Total %>
+    <%= form.number_field :total, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :totalamount %>
-    <%= form.number_field :totalamount %>
+  <div class="field form-group">
+    <%= form.label :Total_amount %>
+    <%= form.number_field :totalamount, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :namabank %>
-    <%= form.text_field :namabank %>
+  <div class="field form-group">
+    <%= form.label :Nama_bank %>
+    <%= form.text_field :namabank, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :namaakun %>
-    <%= form.text_field :namaakun %>
+  <div class="field form-group">
+    <%= form.label :Nama_akun %>
+    <%= form.text_field :namaakun, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :nomorakun %>
-    <%= form.number_field :nomorakun %>
+  <div class="field form-group">
+    <%= form.label :Nomor_akun %>
+    <%= form.number_field :nomorakun, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :swiftcode %>
-    <%= form.text_field :swiftcode %>
+    <%= form.text_field :swiftcode, class:'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Tambahkan Invoice', class: 'btn btn-info btn-sm' %>
   </div>
 <% end %>

@@ -1,5 +1,7 @@
+<%= render partial: 'structures/navigation' %> 
+
 <h1>New Invoice</h1>
 
 <%= render 'form', invoice: @invoice %>
 
-<%= link_to 'Back', invoices_path %>
+<%= link_to 'Back', invoices_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
