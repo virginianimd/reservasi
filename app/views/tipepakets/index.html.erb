@@ -10,8 +10,6 @@
       <th>Nama Supplier</th>
       <th>Nama Aktifitas</th>
       <th>Harga</th>
-      <th>Include</th>
-      <th>Exclude</th>
       <th>Jenis Paket</th>
       <th colspan="3"></th>
     </tr>
@@ -23,8 +21,6 @@
         <td><%= tipepaket.supplier.try(:supplier)%></td>
         <td><%= tipepaket.namaaktifitas %></td>
         <td><%= tipepaket.harga %></td>
-        <td><%= tipepaket.include %></td>
-        <td><%= tipepaket.exclude %></td>
         <td><%= tipepaket.jenispaket %></td>
         <td><%= link_to 'Show', tipepaket, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
         <td><%= link_to 'Edit', edit_tipepaket_path(tipepaket), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
@@ -36,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Tipepaket', new_tipepaket_path, class: 'btn btn-info btn-sm' %>
+<%= link_to 'Tambah Tipe Paket', new_tipepaket_path, class: 'btn btn-info btn-sm' %>

@@ -1,3 +1,5 @@
+<%= render partial: 'structures/navigation' %> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -60,5 +62,5 @@
   <%= @tamu.tipepaket.supplier_id %>
 </p>
 
-<%= link_to 'Edit', edit_tamu_path(@tamu) %> |
-<%= link_to 'Back', tamus_path %>
+<%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %> |
+<%= link_to 'Back', tamus_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>

@@ -8,14 +8,8 @@
   <thead class="thead-dark">
     <tr align="center">
       <th>Kode Booking</th>
-      <th>Nama Tamu</th>
-      <th>Qty</th>
       <th>Tanggal</th>
-      <th>Hotel</th>
-      <th>Negara</th>
-      <th>Telp</th>
-      <th>Email</th>
-      <th>Note</th>
+      <th>Nama Tamu</th>
       <th>Jenis Paket</th>
       <th>Nama Aktifitas</th>
       <th>Supplier</th>
@@ -27,20 +21,14 @@
     <% @tamus.each do |tamu| %>
       <tr>
         <td><%= tamu.kodebooking %></td>
-        <td><%= tamu.namatamu %></td>
-        <td><%= tamu.qty %></td>
         <td><%= tamu.tglaktifitas %></td>
-        <td><%= tamu.hotel %></td>
-        <td><%= tamu.negara %></td>
-        <td><%= tamu.telp %></td>
-        <td><%= tamu.email %></td>
-        <td><%= tamu.note %></td>
+        <td><%= tamu.namatamu %></td>
         <td><%= tamu.tipepaket.try(:jenispaket)%></td>
         <td><%= tamu.tipepaket.try(:namaaktifitas) %></td>
         <td><%= tamu.tipepaket.try(:supplier_id) %></td>
-        <td><%= link_to 'Show', tamu %></td>
-        <td><%= link_to 'Edit', edit_tamu_path(tamu) %></td>
-        <td><%= link_to 'Destroy', tamu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Lihat', tamu, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
+        <td><%= link_to 'Edit', edit_tamu_path(tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
+        <td><%= link_to 'Hapus', tamu, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -48,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Tamu', new_tamu_path %>
+<%= link_to 'Tambah Tamu', new_tamu_path, class: 'btn btn-info btn-sm' %>
