@@ -1,5 +1,13 @@
 <%= render partial: 'structures/navigation' %> 
 
+<div class="container-fluid">
+<div class="col-md-8 col-lg-6">
+<div class="card mx-4">
+  <div class="card-body p-4">
+    <h2 class="card-title">
+      <%= t(".Tamu") %>
+    </h2>
+
 <p>
   <strong>Kodebooking:</strong>
   <%= @tamu.kodebooking %>
@@ -60,5 +68,5 @@
   <%= @tamu.tipepaket.supplier_id %>
 </p>
 
-<%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %> |
+<%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %>
 <%= link_to 'Back', tamus_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>

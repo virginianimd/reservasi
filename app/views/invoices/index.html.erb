@@ -1,6 +1,5 @@
 <%= render partial: 'structures/navigation' %>  
-
-<p id="notice"><%= notice %></p>
+<h1>Invoice</h1>
 
 <table class="table">
   <thead class="thead-dark">
@@ -22,9 +21,9 @@
         <td><%= invoice.paymentdue %></td>
         <td><%= invoice.supplier %></td>
         <td><%= invoice.totalamount %></td>
-        <td><%= link_to 'Show', invoice, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
+        <td><%= link_to 'Lihat', invoice, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
         <td><%= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
+        <td><%= link_to 'Hapus', invoice, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'Tambahkan Invoice', new_invoice_path, class: 'btn btn-info btn-sm' %>
+<%= link_to 'Tambah Invoice', new_invoice_path, class: 'btn btn-info btn-sm' %>

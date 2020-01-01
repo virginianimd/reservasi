@@ -96,6 +96,8 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+<%= link_to 'Edit', edit_invoice_path(@invoice), class: 'btn btn-outline-secondary btn-sm' %>
+<%= link_to 'Back', invoices_path, class: 'btn btn-outline-secondary btn-sm' %>
+</div>
 
-<%= link_to 'Edit', edit_invoice_path(@invoice), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %> |
-<%= link_to 'Back', invoices_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
