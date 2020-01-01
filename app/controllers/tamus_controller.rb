@@ -28,7 +28,7 @@ class TamusController < ApplicationController
 
     respond_to do |format|
       if @tamu.save
-        format.html { redirect_to @tamu, notice: 'Tamu Berhasil Ditambahkan.' }
+        format.html { redirect_to @tamu, notice: 'Data Tamu Berhasil Dibuat.' }
         format.json { render :show, status: :created, location: @tamu }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TamusController < ApplicationController
   def update
     respond_to do |format|
       if @tamu.update(tamu_params)
-        format.html { redirect_to @tamu, notice: 'Tamu Berhasil Diubah.' }
+        format.html { redirect_to @tamu, notice: 'Data Tamu Berhasil Diubah.' }
         format.json { render :show, status: :ok, location: @tamu }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TamusController < ApplicationController
   def destroy
     @tamu.destroy
     respond_to do |format|
-      format.html { redirect_to tamus_url, notice: 'Tamu Berhasil Dihapus.' }
+      format.html { redirect_to tamus_url, notice: 'Data Tamu Berhasil Dihapus.' }
       format.json { head :no_content }
     end
   end
