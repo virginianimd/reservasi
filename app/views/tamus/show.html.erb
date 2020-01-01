@@ -1,72 +1,71 @@
 <%= render partial: 'structures/navigation' %> 
 
-<div class="container-fluid">
+<div class="container">
 <div class="col-md-8 col-lg-6">
 <div class="card mx-4">
   <div class="card-body p-4">
-    <h2 class="card-title">
+    <h2 class="card-title font-italic">
       <%= t(".Tamu") %>
     </h2>
-
-<p>
+<div class="list-group-item list-group-item-dark">
   <strong>Kodebooking:</strong>
   <%= @tamu.kodebooking %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Namatamu:</strong>
   <%= @tamu.namatamu %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Qty:</strong>
   <%= @tamu.qty %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Tanggal:</strong>
   <%= @tamu.tglaktifitas %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Hotel:</strong>
   <%= @tamu.hotel %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Negara:</strong>
   <%= @tamu.negara %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Telp:</strong>
   <%= @tamu.telp %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Email:</strong>
   <%= @tamu.email %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Note:</strong>
   <%= @tamu.note %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Jenispaket:</strong>
   <%= @tamu.tipepaket.jenispaket %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Namaaktifitas:</strong>
   <%= @tamu.tipepaket.namaaktifitas %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Supplier:</strong>
   <%= @tamu.tipepaket.supplier_id %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %>
-<%= link_to 'Back', tamus_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
+<%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-sm fas fa-edit' %>
+<%= link_to 'Back', tamus_path, class: 'btn btn-sm fas fa-long-arrow-alt-left' %>

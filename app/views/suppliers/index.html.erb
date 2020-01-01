@@ -1,8 +1,8 @@
 <%= render partial: 'structures/navigation' %> 
 
 <h1>Supplier</h1>
-
-<table class="table">
+<%= link_to 'Tambah Supplier', new_supplier_path, class: 'btn btn-sm fas fa-plus' %>
+<table class="table table-hover">
   <thead class="thead-dark" align="center">
     <tr>
       <th>Supplier</th>
@@ -21,10 +21,10 @@
         <td><%= supplier.email %></td>
         <td><%= supplier.telp %></td>
         <td>
-          <%= link_to 'Lihat', supplier, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %>
+          <%= link_to 'Lihat', supplier, class: 'btn btn-sm fas fa-list' %>
         </td>
-        <td><%= link_to 'Edit', edit_supplier_path(supplier), class: 'btn btn-default btn-sm glyphicon glyphicon-edit'  %></td>
-        <td><%= link_to 'Hapus', supplier, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm glyphicon glyphicon-remove'  %></td>
+        <td><%= link_to 'Edit', edit_supplier_path(supplier), class: 'btn btn-sm fas fa-edit'  %></td>
+        <td><%= link_to 'Hapus', supplier, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm fas fa-trash-alt'  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,3 @@
 
 <br>
 
-<%= link_to 'Tambah Supplier', new_supplier_path, class: 'btn btn-info btn-sm' %>

@@ -1,31 +1,31 @@
 <%= render partial: 'structures/navigation' %> 
-  <div class="container-fluid">
+  <div class="container">
   <div class="col-md-8 col-lg-6">
   <div class="card mx-4">
     <div class="card-body p-4">
-      <h2 class="card-title">
+      <h2 class="card-title font-italic">
         <%= t(".Supplier") %>
       </h2>
 
-<p>
+<div class="list-group-item list-group-item-info">
   <strong>Supplier:</strong>
   <%= @supplier.supplier %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-info">
   <strong>Alamat:</strong>
   <%= @supplier.address %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-info">
   <strong>Email:</strong>
   <%= @supplier.email %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-info">
   <strong>Telpon:</strong>
   <%= @supplier.telp %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_supplier_path(@supplier), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %>
-<%= link_to 'Back', suppliers_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
+<%= link_to 'Edit', edit_supplier_path(@supplier), class: 'btn btn-sm fas fa-edit' %>
+<%= link_to 'Back', suppliers_path, class: 'btn btn-sm fas fa-long-arrow-alt-left' %>

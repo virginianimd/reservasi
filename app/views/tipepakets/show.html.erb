@@ -1,37 +1,37 @@
 <%= render partial: 'structures/navigation' %> 
 
-  <div class="container-fluid">
+  <div class="container">
   <div class="col-md-8 col-lg-6">
   <div class="card mx-4">
     <div class="card-body p-4">
-      <h2 class="card-title">
+      <h2 class="card-title font-italic">
         <%= t(".Tipe Paket") %>
       </h2>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Nama Aktifitas:</strong>
   <%= @tipepaket.namaaktifitas %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Harga:</strong>
   <%= @tipepaket.harga %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Include:</strong>
   <%= @tipepaket.include %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Exclude:</strong>
   <%= @tipepaket.exclude %>
-</p>
+</div>
 
-<p>
+<div class="list-group-item list-group-item-success">
   <strong>Jenis Paket:</strong>
   <%= @tipepaket.jenispaket %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_tipepaket_path(@tipepaket), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %>
-<%= link_to 'Back', tipepakets_path, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-left' %>
+<%= link_to 'Edit', edit_tipepaket_path(@tipepaket), class: 'btn btn-sm fas fa-edit' %>
+<%= link_to 'Back', tipepakets_path, class: 'btn btn-sm fas fa-long-arrow-alt-left' %>

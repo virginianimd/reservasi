@@ -1,10 +1,12 @@
 <%= render partial: 'structures/navigation' %>  
 <h1>Data Tamu</h1>
 <%= form_tag tamus_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
+  <%= text_field_tag :search, params[:search], class:'form-control form-inline', placeholder:'Input Kode Booking' %>
+  <%= submit_tag "Search", class:'btn btn-default btn-md fas fa-search' %>
 <% end %>
-<table class="table">
+<%= link_to 'Tambah Tamu', new_tamu_path, class: 'btn btn-sm fas fa-plus' %>
+
+<table class="table table-hover">
   <thead class="thead-dark">
     <tr align="center">
       <th>Kode Booking</th>
@@ -17,7 +19,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="tbody-hover">
     <% @tamus.each do |tamu| %>
       <tr>
         <td><%= tamu.kodebooking %></td>
@@ -26,14 +28,12 @@
         <td><%= tamu.tipepaket.try(:jenispaket)%></td>
         <td><%= tamu.tipepaket.try(:namaaktifitas) %></td>
         <td><%= tamu.tipepaket.try(:supplier_id) %></td>
-        <td><%= link_to 'Lihat', tamu, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
-        <td><%= link_to 'Edit', edit_tamu_path(tamu), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
-        <td><%= link_to 'Hapus', tamu, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
+        <td><%= link_to 'Lihat', tamu, class: 'btn btn-sm fas fa-list' %></td>
+        <td><%= link_to 'Edit', edit_tamu_path(tamu), class: 'btn btn-sm fas fa-edit' %></td>
+        <td><%= link_to 'Hapus', tamu, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm fas fa-trash-alt' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Tambah Tamu', new_tamu_path, class: 'btn btn-info btn-sm' %>

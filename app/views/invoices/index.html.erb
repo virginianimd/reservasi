@@ -1,7 +1,7 @@
 <%= render partial: 'structures/navigation' %>  
 <h1>Invoice</h1>
-
-<table class="table">
+<%= link_to 'Tambah Invoice', new_invoice_path, class: 'btn btn-sm fas fa-plus' %>
+<table class="table table-hover">
   <thead class="thead-dark">
     <tr align="center">
       <th>No Invoice</th>
@@ -21,14 +21,12 @@
         <td><%= invoice.paymentdue %></td>
         <td><%= invoice.supplier %></td>
         <td><%= invoice.totalamount %></td>
-        <td><%= link_to 'Lihat', invoice, class: 'btn btn-default btn-sm glyphicon glyphicon-menu-hamburger' %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-default btn-sm glyphicon glyphicon-edit' %></td>
-        <td><%= link_to 'Hapus', invoice, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-default btn-sm glyphicon glyphicon-remove' %></td>
+        <td><%= link_to 'Lihat', invoice, class: 'btn btn-sm fas fa-list' %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-sm fas fa-edit' %></td>
+        <td><%= link_to 'Hapus', invoice, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-sm fas fa-trash-alt' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Tambah Invoice', new_invoice_path, class: 'btn btn-info btn-sm' %>

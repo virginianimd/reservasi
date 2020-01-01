@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="container-fluid">
+  <div class="container">
   <div class="col-md-8 col-lg-6">
   <div class="card mx-4">
     <div class="card-body p-4">
-      <h2 class="card-title">
+      <h2 class="card-title font-italic">
         <%= t(".Tamu") %>
       </h2>
 
@@ -27,7 +27,7 @@
 
   <div class="field form-group">
     <%= form.label :Nama_Tamu %>
-    <%= form.text_field :namatamu, class: 'form-control' %>
+    <%= form.text_field :namatamu, class:'form-control text-capitalize' %>
   </div>
 
   <div class="field form-group">
@@ -42,12 +42,12 @@
 
   <div class="field form-group">
     <%= form.label :Hotel %>
-    <%= form.text_area :hotel, class: 'form-control' %>
+    <%= form.text_area :hotel, class: 'form-control text-capitalize' %>
   </div>
 
   <div class="field form-group">
     <%= form.label :Negara %>
-    <%= form.text_field :negara, class: 'form-control' %>
+    <%= form.text_field :negara, class: 'form-control text-capitalize' %>
   </div>
 
   <div class="field form-group">
@@ -62,12 +62,12 @@
 
   <div class="field form-group">
     <%= form.label :Driver %>
-    <%= form.text_field :driver, class: 'form-control' %>
+    <%= form.text_field :driver, class: 'form-control text-capitalize' %>
   </div>
 
   <div class="field form-group">
     <%= form.label :Note %>
-    <%= form.text_area :note, class: 'form-control' %>
+    <%= form.text_area :note, class: 'form-control text-capitalize' %>
   </div>
 
   <div class="field form-group">
@@ -81,7 +81,7 @@
   </div>
 
   <div class="field form-group">
-    <%= form.label :jenispaket %>
+    <%= form.label :Jenis_paket %>
     <%= collection_select( :tamu, :tipepaket_id, Tipepaket.all, :id, :jenispaket, {}, { :multiple => false }) %>
   </div>
 
