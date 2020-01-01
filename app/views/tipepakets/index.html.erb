@@ -1,14 +1,14 @@
 <%= render partial: 'structures/navigation' %>  
 
-<h1>Tipepaket</h1>
+<h1>Tipe Paket</h1>
 <%= link_to 'Tambah Tipe Paket', new_tipepaket_path, class: 'btn btn-sm fas fa-plus' %>
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th>Nama Supplier</th>
+      <th>Tipe Paket</th>
       <th>Nama Aktifitas</th>
       <th>Harga</th>
-      <th>Jenis Paket</th>
+      <th>Nama Supplier</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @tipepakets.each do |tipepaket| %>
       <tr>
-        <td><%= tipepaket.supplier.try(:supplier)%></td>
+        <td><%= tipepaket.jenispaket %></td>
         <td><%= tipepaket.namaaktifitas %></td>
         <td><%= tipepaket.harga %></td>
-        <td><%= tipepaket.jenispaket %></td>
+        <td><%= tipepaket.supplier.try(:supplier)%></td>
         <td><%= link_to 'Lihat', tipepaket, class: 'btn btn-sm fas fa-list' %></td>
         <td><%= link_to 'Edit', edit_tipepaket_path(tipepaket), class: 'btn btn-sm fas fa-edit' %></td>
         <td><%= link_to 'Hapus', tipepaket, method: :delete, data: { confirm: 'Are you sure?' }, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm fas fa-trash-alt' %></td>

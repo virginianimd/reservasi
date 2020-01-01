@@ -8,12 +8,27 @@
       <%= t(".Tamu") %>
     </h2>
 <div class="list-group-item list-group-item-dark">
-  <strong>Kodebooking:</strong>
+  <strong>Kode Booking:</strong>
   <%= @tamu.kodebooking %>
 </div>
 
 <div class="list-group-item list-group-item-success">
-  <strong>Namatamu:</strong>
+  <strong>Supplier:</strong>
+  <%= @tamu.tipepaket.supplier_id %>
+</div>
+
+<div class="list-group-item list-group-item-success">
+  <strong>Tipe Paket:</strong>
+  <%= @tamu.tipepaket.jenispaket %>
+</div>
+
+<div class="list-group-item list-group-item-success">
+  <strong>Nama Aktifitas:</strong>
+  <%= @tamu.tipepaket.namaaktifitas %>
+</div>
+
+<div class="list-group-item list-group-item-success">
+  <strong>Nama Tamu:</strong>
   <%= @tamu.namatamu %>
 </div>
 
@@ -50,21 +65,6 @@
 <div class="list-group-item list-group-item-success">
   <strong>Note:</strong>
   <%= @tamu.note %>
-</div>
-
-<div class="list-group-item list-group-item-success">
-  <strong>Jenispaket:</strong>
-  <%= @tamu.tipepaket.jenispaket %>
-</div>
-
-<div class="list-group-item list-group-item-success">
-  <strong>Namaaktifitas:</strong>
-  <%= @tamu.tipepaket.namaaktifitas %>
-</div>
-
-<div class="list-group-item list-group-item-success">
-  <strong>Supplier:</strong>
-  <%= @tamu.tipepaket.supplier_id %>
 </div>
 
 <%= link_to 'Edit', edit_tamu_path(@tamu), class: 'btn btn-sm fas fa-edit' %>

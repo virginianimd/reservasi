@@ -9,6 +9,11 @@
       </h2>
 
 <div class="list-group-item list-group-item-success">
+  <strong>Tipe Paket:</strong>
+  <%= @tipepaket.jenispaket %>
+</div>
+
+<div class="list-group-item list-group-item-success">
   <strong>Nama Aktifitas:</strong>
   <%= @tipepaket.namaaktifitas %>
 </div>
@@ -19,6 +24,11 @@
 </div>
 
 <div class="list-group-item list-group-item-success">
+  <strong>Supplier:</strong>
+  <%= @tipepaket.supplier.supplier %>
+</div>
+
+<div class="list-group-item list-group-item-success">
   <strong>Include:</strong>
   <%= @tipepaket.include %>
 </div>
@@ -26,11 +36,6 @@
 <div class="list-group-item list-group-item-success">
   <strong>Exclude:</strong>
   <%= @tipepaket.exclude %>
-</div>
-
-<div class="list-group-item list-group-item-success">
-  <strong>Jenis Paket:</strong>
-  <%= @tipepaket.jenispaket %>
 </div>
 
 <%= link_to 'Edit', edit_tipepaket_path(@tipepaket), class: 'btn btn-sm fas fa-edit' %>

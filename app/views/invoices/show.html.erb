@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container-fluid" align="center">
     <div class="row">
         <div class="col-md-12">
@@ -22,10 +20,10 @@
                     <div class="card  height">
                         <div class="card-header">Bank Information</div>
                         <div class="card-block">
-                            <strong>Bank Name:</strong><%= @invoice.namabank %><br>
-                            <strong>Account Name:</strong> <%= @invoice.namaakun %><br>
-                            <strong>Account Number:</strong> <%= @invoice.nomorakun %><br>
-                            <strong>Swiftcode:</strong> <%= @invoice.swiftcode %><br>
+                            <strong>Bank Name: </strong><%= @invoice.namabank %><br>
+                            <strong>Account Name: </strong> <%= @invoice.namaakun %><br>
+                            <strong>Account Number: </strong> <%= @invoice.nomorakun %><br>
+                            <strong>Swiftcode: </strong><%= @invoice.swiftcode %><br>
                         </div>
                     </div>
                 </div>
@@ -34,7 +32,7 @@
                         <div class="card-header">Payment Information</div>
                         <div class="card-block">
                             <strong>Date: </strong><%= @invoice.tanggal %><br>
-                            <strong>Due Date:</strong><%= @invoice.paymentdue %><br>
+                            <strong>Due Date: </strong><%= @invoice.paymentdue %><br>
                         </div>
                     </div>
                 </div>
@@ -97,7 +95,6 @@
     </div>
 </div>
 <div class="container-fluid">
-<%= link_to 'Edit', edit_invoice_path(@invoice), class: 'btn btn-sm' %>
 <%= link_to 'Back', invoices_path, class: 'btn btn-sm' %>
 </div>
 

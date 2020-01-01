@@ -1,7 +1,7 @@
 <%= render partial: 'structures/navigation' %>  
 <h1>Data Tamu</h1>
 <%= form_tag tamus_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search], class:'form-control form-inline', placeholder:'Input Kode Booking' %>
+  <%= text_field_tag :search, params[:search], class:'form-control', placeholder:'Input Kode Booking' %>
   <%= submit_tag "Search", class:'btn btn-default btn-md fas fa-search' %>
 <% end %>
 <%= link_to 'Tambah Tamu', new_tamu_path, class: 'btn btn-sm fas fa-plus' %>
