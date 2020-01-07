@@ -1,10 +1,11 @@
 class TamusController < ApplicationController
+  include Pagy::Backend
   before_action :set_tamu, only: [:show, :edit, :update, :destroy]
 
   # GET /tamus
   # GET /tamus.json
   def index
-    @tamus = Tamu.search(params[:search])
+   @pagy, @tamus = pagy(Tamu.search(params[:search]))
   end
 
   # GET /tamus/1
