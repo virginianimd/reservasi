@@ -1,4 +1,6 @@
-<%= render partial: 'structures/navigation' %>  
+<%= render 'structures/navigation' %>
+<%= render 'structures/breadcrumbs' %>
+
 <h1>Data Tamu</h1>
 <%= form_tag tamus_path, :method => 'get' do %>
   <%= text_field_tag :search, params[:search], class:'form-control', placeholder:'Input Kode Booking' %>

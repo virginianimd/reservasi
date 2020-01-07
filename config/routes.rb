@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'landing/index'
   resources :tamus
   resources :suppliers
   resources :tipepakets
@@ -7,6 +8,6 @@ Rails.application.routes.draw do
   resources :bankaccounts
 
   devise_for :users
-  root "tamus#index"
+  root "landing#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
